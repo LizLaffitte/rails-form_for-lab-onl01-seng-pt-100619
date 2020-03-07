@@ -7,6 +7,7 @@ class SchoolClassesController < ApplicationController
   def create
     @school_class = SchoolClass.new(school_params)
     @school_class.save
+    redirect_to 
   end
   
   private 
