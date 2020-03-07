@@ -6,10 +6,12 @@ class StudentsController < ApplicationController
   def create
     @student = Student.new(school_params)
     @student.save
-    redirect_to sstudent_path(@sstudent)
+    redirect_to student_path(@student)
   end
   
-  def sstudent
+  def show 
+  end 
+  
   private 
     def school_params
       params.require(:sstudent).permit(:title, :room_number)
